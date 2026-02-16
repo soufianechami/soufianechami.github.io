@@ -36,7 +36,7 @@ export function ContactSection() {
             Get in Touch
           </span>
           <h2 className="text-3xl md:text-4xl font-bold font-mono tracking-tight mb-4">
-            Let's <span className="gradient-text">Work Together</span>
+            Let's <span className="accent-text">Work Together</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto">
             Whether you're a conference organizer, government leader, or enterprise executive —

@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Building2, TrendingUp, Cpu, FlaskConical, Landmark } from "lucide-react";
 
 const experiences = [
   {
@@ -7,7 +6,6 @@ const experiences = [
     company: "SambaNova Systems",
     location: "Dubai, UAE",
     period: "2024 - Present",
-    icon: Cpu,
     highlights: [
       "Leading technical advisory and deployment of large-scale sovereign AI inference infrastructures for CSPs, banking, telecom, and government clients across Europe and the Middle East",
       "Driving alignment across engineering, hardware, and product teams — translating enterprise insights into product roadmap improvements",
@@ -20,7 +18,6 @@ const experiences = [
     company: "Bain & Company",
     location: "London & Dubai",
     period: "2021 - 2024",
-    icon: TrendingUp,
     highlights: [
       "Owned and led development of multiple GenAI products leveraging LangChain, LlamaIndex, Knowledge Graphs, and text-to-speech frameworks",
       "Delivered strategic end-to-end analytics for fraud detection, pricing, credit risk, and marketing using state-of-the-art ML models",
@@ -33,7 +30,6 @@ const experiences = [
     company: "The Sultan Center",
     location: "Dubai, UAE",
     period: "2020 - 2021",
-    icon: Building2,
     highlights: [
       "Developed dynamic pricing system with group COO and CCO, enhancing profitability and sustaining market leadership",
       "Deployed 50+ predictive models for demand forecasting with 70-80% accuracy",
@@ -45,7 +41,6 @@ const experiences = [
     company: "University of North Dakota",
     location: "United States",
     period: "2018 - 2020",
-    icon: FlaskConical,
     highlights: [
       "Developed ML models for early detection of sepsis (6 hours ahead of physicians) — presented at Computing in Cardiology 2019 in Singapore",
       "Built deep learning solution for smart grid energy consumption forecasting",
@@ -57,7 +52,6 @@ const experiences = [
     company: "BMCE Bank of Africa Group",
     location: "Casablanca, Morocco",
     period: "2017 - 2018",
-    icon: Landmark,
     highlights: [
       "Built and deployed credit risk models, reducing loan defaults by $1M within the pilot phase",
       "Integrated models into production decision systems and trained credit teams on adoption",
@@ -76,11 +70,11 @@ export function ExperienceSection() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="text-sm font-mono text-muted-foreground tracking-widest uppercase mb-3 block">
+          <span className="text-sm font-mono text-muted-foreground tracking-widest uppercase mb-3 block" data-testid="text-experience-label">
             Experience
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold font-mono tracking-tight">
-            Career <span className="gradient-text">Trajectory</span>
+          <h2 className="text-3xl md:text-4xl font-bold font-mono tracking-tight" data-testid="text-experience-heading">
+            Career <span className="accent-text">Trajectory</span>
           </h2>
         </motion.div>
 
@@ -99,14 +93,14 @@ export function ExperienceSection() {
                 data-testid={`card-experience-${i}`}
               >
                 <div className="absolute left-2 md:left-6 top-1 w-5 h-5 rounded-full border-2 border-border bg-background flex items-center justify-center">
-                  <div className="w-2 h-2 rounded-full" style={{ background: "hsl(235 70% 60%)" }} />
+                  <div className="w-2 h-2 rounded-full bg-primary" />
                 </div>
 
                 <div className="mb-2 flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                  <h3 className="text-lg font-bold text-foreground">{exp.role}</h3>
+                  <h3 className="text-lg font-bold text-foreground" data-testid={`text-role-${i}`}>{exp.role}</h3>
                 </div>
                 <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mb-3">
-                  <span className="text-sm font-medium gradient-text font-mono">{exp.company}</span>
+                  <span className="text-sm font-medium accent-text font-mono" data-testid={`text-company-${i}`}>{exp.company}</span>
                   <span className="text-xs text-muted-foreground">{exp.location}</span>
                   <span className="text-xs text-muted-foreground font-mono">{exp.period}</span>
                 </div>

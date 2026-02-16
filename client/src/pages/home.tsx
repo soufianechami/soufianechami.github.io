@@ -13,17 +13,17 @@ export default function Home() {
     <div id="top" className="min-h-screen bg-background">
       <Navigation />
       <HeroSection />
-      <div className="glow-line h-px w-full" />
+      <div className="section-divider" />
       <AboutSection />
-      <div className="glow-line h-px w-full" />
+      <div className="section-divider" />
       <ExperienceSection />
-      <div className="glow-line h-px w-full" />
+      <div className="section-divider" />
       <ImpactSection />
-      <div className="glow-line h-px w-full" />
+      <div className="section-divider" />
       <SpeakingSection />
-      <div className="glow-line h-px w-full" />
+      <div className="section-divider" />
       <ExpertiseSection />
-      <div className="glow-line h-px w-full" />
+      <div className="section-divider" />
       <ContactSection />
       <Footer />
     </div>

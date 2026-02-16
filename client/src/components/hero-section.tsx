@@ -5,25 +5,25 @@ import { Button } from "@/components/ui/button";
 function GridBackground() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
       <div
-        className="absolute inset-0 opacity-[0.03] dark:opacity-[0.06]"
+        className="absolute inset-0 opacity-[0.025] dark:opacity-[0.04]"
         style={{
-          backgroundImage: `linear-gradient(hsl(235 70% 60% / 0.3) 1px, transparent 1px), linear-gradient(90deg, hsl(235 70% 60% / 0.3) 1px, transparent 1px)`,
-          backgroundSize: "60px 60px",
+          backgroundImage: `linear-gradient(hsl(var(--foreground) / 0.15) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground) / 0.15) 1px, transparent 1px)`,
+          backgroundSize: "80px 80px",
         }}
       />
       <motion.div
-        className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-[120px] opacity-20"
-        style={{ background: "hsl(235 70% 60%)" }}
-        animate={{ scale: [1, 1.2, 1], opacity: [0.15, 0.25, 0.15] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-1/3 left-1/3 w-[500px] h-[500px] rounded-full blur-[160px] opacity-[0.06] dark:opacity-[0.08]"
+        style={{ background: "hsl(18 60% 58%)" }}
+        animate={{ scale: [1, 1.15, 1], opacity: [0.05, 0.09, 0.05] }}
+        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full blur-[100px] opacity-15"
-        style={{ background: "hsl(270 60% 60%)" }}
-        animate={{ scale: [1, 1.15, 1], opacity: [0.1, 0.2, 0.1] }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+        className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] rounded-full blur-[140px] opacity-[0.04] dark:opacity-[0.06]"
+        style={{ background: "hsl(210 35% 55%)" }}
+        animate={{ scale: [1, 1.1, 1], opacity: [0.03, 0.06, 0.03] }}
+        transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 3 }}
       />
     </div>
   );
@@ -42,9 +42,17 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-6"
+          className="mb-8"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/50 bg-card/50 backdrop-blur-sm text-sm text-muted-foreground font-mono">
+          <div className="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden border-2 border-border/50">
+            <img
+              src="/images/soufiane-profile.jpg"
+              alt="Soufiane Chami"
+              className="w-full h-full object-cover"
+              data-testid="img-profile"
+            />
+          </div>
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/50 bg-card/50 backdrop-blur-sm text-sm text-muted-foreground font-mono" data-testid="badge-availability">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
             Available for Speaking & Advisory
           </span>
@@ -59,7 +67,7 @@ export function HeroSection() {
         >
           <span className="text-foreground">Building the</span>
           <br />
-          <span className="gradient-text">Next Era of AI</span>
+          <span className="accent-text">Next Era of AI</span>
           <br />
           <span className="text-foreground">Infrastructure</span>
         </motion.h1>
@@ -68,7 +76,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed"
+          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
           data-testid="text-hero-subtitle"
         >
           Principal Solutions Engineer at SambaNova Systems. Former Bain & Company.
@@ -94,13 +102,13 @@ export function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="flex items-center justify-center gap-4"
+          className="flex items-center justify-center gap-3"
         >
           <a
             href="https://linkedin.com/in/soufianechami"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 rounded-md text-muted-foreground transition-colors hover-elevate"
+            className="p-2.5 rounded-md text-muted-foreground transition-colors hover-elevate"
             data-testid="link-linkedin"
           >
             <Linkedin className="w-5 h-5" />
@@ -109,7 +117,7 @@ export function HeroSection() {
             href="https://github.com/soufianechami"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 rounded-md text-muted-foreground transition-colors hover-elevate"
+            className="p-2.5 rounded-md text-muted-foreground transition-colors hover-elevate"
             data-testid="link-github"
           >
             <Github className="w-5 h-5" />
@@ -118,7 +126,7 @@ export function HeroSection() {
             href="https://twitter.com/soufianechami"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 rounded-md text-muted-foreground transition-colors hover-elevate"
+            className="p-2.5 rounded-md text-muted-foreground transition-colors hover-elevate"
             data-testid="link-twitter"
           >
             <Twitter className="w-5 h-5" />

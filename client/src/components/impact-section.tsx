@@ -89,13 +89,13 @@ export function ImpactSection() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="text-sm font-mono text-muted-foreground tracking-widest uppercase mb-3 block">
+          <span className="text-sm font-mono text-muted-foreground tracking-widest uppercase mb-3 block" data-testid="text-impact-label">
             Featured Work
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold font-mono tracking-tight mb-4">
-            The <span className="gradient-text">Impact</span>
+          <h2 className="text-3xl md:text-4xl font-bold font-mono tracking-tight mb-4" data-testid="text-impact-heading">
+            The <span className="accent-text">Impact</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl">
+          <p className="text-lg text-muted-foreground max-w-2xl" data-testid="text-impact-description">
             From deploying sovereign AI data centers to advising governments on national AI strategy —
             building real infrastructure for the AI era.
           </p>
@@ -113,10 +113,10 @@ export function ImpactSection() {
               <Card className="p-6 h-full border-border/50" data-testid={`card-impact-${i}`}>
                 <div className="flex items-start gap-3 mb-4">
                   <div className="p-2 rounded-md bg-primary/10">
-                    <cat.icon className="w-5 h-5 text-primary dark:text-primary" />
+                    <cat.icon className="w-5 h-5 accent-text" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-foreground">{cat.title}</h3>
+                    <h3 className="text-lg font-bold text-foreground" data-testid={`text-impact-title-${i}`}>{cat.title}</h3>
                     <p className="text-sm text-muted-foreground mt-1">{cat.description}</p>
                   </div>
                 </div>
@@ -132,7 +132,7 @@ export function ImpactSection() {
 
                 <div className="flex flex-wrap gap-1.5">
                   {cat.tags.map((tag) => (
-                    <Badge key={tag} variant="secondary" className="text-xs">
+                    <Badge key={tag} variant="secondary" className="text-xs" data-testid={`badge-${tag.toLowerCase().replace(/\s/g, "-")}`}>
                       {tag}
                     </Badge>
                   ))}

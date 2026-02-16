@@ -48,6 +48,15 @@ const expertiseCategories = [
   },
 ];
 
+const publications = [
+  { title: "Fulbright Scholar", detail: "U.S. Department of State" },
+  { title: "Google Grant - Sepsis Research", detail: "San Francisco, USA, 2019" },
+  { title: "NSF Student Award - IEOM Society", detail: "Toronto, Canada, 2019" },
+  { title: "\"Early Prediction of Sepsis using Machine Learning\"", detail: "Computing in Cardiology (CinC 2019, Singapore)" },
+  { title: "\"Deep Energy Retrofit Forecasting\"", detail: "IEEE Energy Systems Conference" },
+  { title: "Graduate Student Award - Excellence in Entrepreneurship", detail: "Johannesburg, South Africa, 2015" },
+];
+
 export function ExpertiseSection() {
   return (
     <section id="expertise" className="py-24 relative" data-testid="section-expertise">
@@ -59,13 +68,13 @@ export function ExpertiseSection() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="text-sm font-mono text-muted-foreground tracking-widest uppercase mb-3 block">
+          <span className="text-sm font-mono text-muted-foreground tracking-widest uppercase mb-3 block" data-testid="text-expertise-label">
             Technical Expertise
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold font-mono tracking-tight mb-4">
-            The <span className="gradient-text">Engineer</span>
+          <h2 className="text-3xl md:text-4xl font-bold font-mono tracking-tight mb-4" data-testid="text-expertise-heading">
+            The <span className="accent-text">Engineer</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl">
+          <p className="text-lg text-muted-foreground max-w-2xl" data-testid="text-expertise-description">
             Deep technical expertise spanning AI hardware architectures, production ML systems,
             and enterprise-grade AI deployment — combined with strategic GTM capabilities.
           </p>
@@ -81,11 +90,11 @@ export function ExpertiseSection() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
               <Card className="p-6 h-full border-border/50" data-testid={`card-expertise-${i}`}>
-                <h3 className="text-lg font-bold font-mono text-foreground mb-4">{cat.title}</h3>
+                <h3 className="text-lg font-bold font-mono text-foreground mb-4" data-testid={`text-expertise-title-${i}`}>{cat.title}</h3>
                 <div className="space-y-2">
                   {cat.items.map((item) => (
                     <div key={item} className="flex items-center gap-3 text-sm text-muted-foreground">
-                      <div className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: "hsl(235 70% 60%)" }} />
+                      <div className="w-1.5 h-1.5 rounded-full shrink-0 bg-primary" />
                       {item}
                     </div>
                   ))}
@@ -102,55 +111,18 @@ export function ExpertiseSection() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-12"
         >
-          <Card className="p-6 border-border/50">
-            <h3 className="text-lg font-bold font-mono text-foreground mb-4">Publications & Recognition</h3>
+          <Card className="p-6 border-border/50" data-testid="card-publications">
+            <h3 className="text-lg font-bold font-mono text-foreground mb-4" data-testid="text-publications-heading">Publications & Recognition</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full mt-2 shrink-0" style={{ background: "hsl(270 60% 60%)" }} />
+              {publications.map((pub, i) => (
+                <div key={i} className="flex items-start gap-3" data-testid={`item-publication-${i}`}>
+                  <div className="w-1.5 h-1.5 rounded-full mt-2 shrink-0 bg-primary" />
                   <div>
-                    <div className="text-sm font-medium text-foreground">Fulbright Scholar</div>
-                    <div className="text-xs text-muted-foreground">U.S. Department of State</div>
+                    <div className="text-sm font-medium text-foreground">{pub.title}</div>
+                    <div className="text-xs text-muted-foreground">{pub.detail}</div>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full mt-2 shrink-0" style={{ background: "hsl(270 60% 60%)" }} />
-                  <div>
-                    <div className="text-sm font-medium text-foreground">Google Grant - Sepsis Research</div>
-                    <div className="text-xs text-muted-foreground">San Francisco, USA, 2019</div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full mt-2 shrink-0" style={{ background: "hsl(270 60% 60%)" }} />
-                  <div>
-                    <div className="text-sm font-medium text-foreground">NSF Student Award - IEOM Society</div>
-                    <div className="text-xs text-muted-foreground">Toronto, Canada, 2019</div>
-                  </div>
-                </div>
-              </div>
-              <div className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full mt-2 shrink-0" style={{ background: "hsl(270 60% 60%)" }} />
-                  <div>
-                    <div className="text-sm font-medium text-foreground">"Early Prediction of Sepsis using Machine Learning"</div>
-                    <div className="text-xs text-muted-foreground">Computing in Cardiology (CinC 2019, Singapore)</div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full mt-2 shrink-0" style={{ background: "hsl(270 60% 60%)" }} />
-                  <div>
-                    <div className="text-sm font-medium text-foreground">"Deep Energy Retrofit Forecasting"</div>
-                    <div className="text-xs text-muted-foreground">IEEE Energy Systems Conference</div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full mt-2 shrink-0" style={{ background: "hsl(270 60% 60%)" }} />
-                  <div>
-                    <div className="text-sm font-medium text-foreground">Graduate Student Award - Excellence in Entrepreneurship</div>
-                    <div className="text-xs text-muted-foreground">Johannesburg, South Africa, 2015</div>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </Card>
         </motion.div>

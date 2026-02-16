@@ -74,13 +74,13 @@ export function SpeakingSection() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="text-sm font-mono text-muted-foreground tracking-widest uppercase mb-3 block">
+          <span className="text-sm font-mono text-muted-foreground tracking-widest uppercase mb-3 block" data-testid="text-speaking-label">
             Speaking & Media
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold font-mono tracking-tight mb-4">
-            The <span className="gradient-text">Voice</span> of Sovereign AI
+          <h2 className="text-3xl md:text-4xl font-bold font-mono tracking-tight mb-4" data-testid="text-speaking-heading">
+            The <span className="accent-text">Voice</span> of Sovereign AI
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl">
+          <p className="text-lg text-muted-foreground max-w-2xl" data-testid="text-speaking-description">
             Sharing insights on AI infrastructure, enterprise transformation, and national AI strategy
             at the world's leading technology events.
           </p>
@@ -95,7 +95,7 @@ export function SpeakingSection() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
-              <Card className="p-5 h-full border-border/50 text-center">
+              <Card className="p-5 h-full border-border/50 text-center" data-testid={`card-engagement-${i}`}>
                 <type.icon className="w-5 h-5 mx-auto text-muted-foreground mb-3" />
                 <div className="text-sm font-bold text-foreground mb-1">{type.label}</div>
                 <div className="text-xs text-muted-foreground leading-relaxed">{type.detail}</div>
@@ -111,7 +111,7 @@ export function SpeakingSection() {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <h3 className="text-xl font-bold font-mono mb-6">Speaking Topics</h3>
+          <h3 className="text-xl font-bold font-mono mb-6" data-testid="text-topics-heading">Speaking Topics</h3>
           <div className="space-y-3">
             {speakingTopics.map((topic, i) => (
               <motion.div
@@ -124,7 +124,7 @@ export function SpeakingSection() {
                 <Card className="p-4 border-border/50" data-testid={`card-topic-${i}`}>
                   <div className="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-4">
                     <div className="flex-1">
-                      <h4 className="text-sm font-bold text-foreground mb-1">{topic.title}</h4>
+                      <h4 className="text-sm font-bold text-foreground mb-1" data-testid={`text-topic-title-${i}`}>{topic.title}</h4>
                       <p className="text-xs text-muted-foreground leading-relaxed">{topic.description}</p>
                     </div>
                     <div className="flex flex-wrap gap-1.5 shrink-0">
@@ -147,10 +147,10 @@ export function SpeakingSection() {
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6 }}
         >
-          <h3 className="text-xl font-bold font-mono mb-4">Notable Events</h3>
+          <h3 className="text-xl font-bold font-mono mb-4" data-testid="text-events-heading">Notable Events</h3>
           <div className="flex flex-wrap gap-2">
             {events.map((event) => (
-              <Badge key={event} variant="outline" className="text-xs py-1.5 px-3">
+              <Badge key={event} variant="outline" className="text-xs py-1.5 px-3" data-testid={`badge-event-${event.toLowerCase().replace(/\s/g, "-")}`}>
                 {event}
               </Badge>
             ))}

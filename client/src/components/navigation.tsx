@@ -43,7 +43,7 @@ export function Navigation() {
             className="font-mono text-lg font-bold tracking-tight"
             data-testid="link-home"
           >
-            <span className="gradient-text">SC</span>
+            <span className="accent-text">SC</span>
           </a>
 
           <div className="hidden md:flex items-center gap-1">

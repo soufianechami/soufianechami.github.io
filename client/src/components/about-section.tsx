@@ -40,27 +40,27 @@ export function AboutSection() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="text-sm font-mono text-muted-foreground tracking-widest uppercase mb-3 block">
+          <span className="text-sm font-mono text-muted-foreground tracking-widest uppercase mb-3 block" data-testid="text-about-label">
             About
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold font-mono tracking-tight mb-6">
-            The Strategist Who <span className="gradient-text">Builds</span>
+          <h2 className="text-3xl md:text-4xl font-bold font-mono tracking-tight mb-8" data-testid="text-about-heading">
+            The Strategist Who <span className="accent-text">Builds</span>
           </h2>
-          <div className="max-w-3xl">
-            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+          <div className="max-w-3xl space-y-5">
+            <p className="text-lg text-muted-foreground leading-relaxed" data-testid="text-about-bio-1">
               Soufiane is a Principal Solutions Engineer at SambaNova Systems, where he architects
               large-scale AI clusters and sovereign inference platforms for national programs
               and global enterprises. His work spans full-stack AI — from semiconductor-level
               acceleration and data center design to multi-agent LLM systems.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+            <p className="text-lg text-muted-foreground leading-relaxed" data-testid="text-about-bio-2">
               Previously at Bain & Company, he advised Gulf ministries, telecoms, and leading
               enterprises on AI strategy, operating models, and digital transformation. He has
               served high-profile clients including leading banks in Germany, payment gateways in
               the DACH region, Italy's largest retailer, and major government agencies in Abu Dhabi
               and Saudi Arabia.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-muted-foreground leading-relaxed" data-testid="text-about-bio-3">
               As a Fulbright Scholar, Soufiane specialized in computer science and AI at the
               University of North Dakota, later becoming a trusted advisor to CEOs, CTOs, and
               public leaders on the responsible and high-value adoption of Generative AI.
@@ -78,9 +78,9 @@ export function AboutSection() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
-              <Card className="p-5 h-full border-border/50">
+              <Card className="p-5 h-full border-border/50" data-testid={`card-stat-${i}`}>
                 <item.icon className="w-5 h-5 text-muted-foreground mb-3" />
-                <div className="text-2xl font-bold font-mono gradient-text mb-1" data-testid={`text-stat-${item.label.toLowerCase().replace(/\s/g, "-")}`}>
+                <div className="text-2xl font-bold font-mono accent-text mb-1" data-testid={`text-stat-${item.label.toLowerCase().replace(/\s/g, "-")}`}>
                   {item.value}
                 </div>
                 <div className="text-sm font-medium text-foreground mb-1">{item.label}</div>
