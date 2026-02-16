@@ -138,7 +138,7 @@ export function HeroSection() {
           className="flex items-center justify-center gap-3"
         >
           <a
-            href="https://linkedin.com/in/soufianechami"
+            href="https://www.linkedin.com/in/soufiane-chami/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2.5 rounded-md text-muted-foreground transition-colors hover-elevate"
@@ -156,7 +156,7 @@ export function HeroSection() {
             <Github className="w-5 h-5" />
           </a>
           <a
-            href="https://twitter.com/soufianechami"
+            href="https://twitter.com/soufiane_chami"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2.5 rounded-md text-muted-foreground transition-colors hover-elevate"
