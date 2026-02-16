@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Linkedin, Github, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTheme } from "@/lib/theme";
 
 function GridBackground() {
   return (
@@ -15,17 +16,48 @@ function GridBackground() {
       />
       <motion.div
         className="absolute top-1/3 left-1/3 w-[500px] h-[500px] rounded-full blur-[160px] opacity-[0.06] dark:opacity-[0.08]"
-        style={{ background: "hsl(18 60% 58%)" }}
+        style={{ background: "hsl(0 100% 40%)" }}
         animate={{ scale: [1, 1.15, 1], opacity: [0.05, 0.09, 0.05] }}
         transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
         className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] rounded-full blur-[140px] opacity-[0.04] dark:opacity-[0.06]"
-        style={{ background: "hsl(210 35% 55%)" }}
+        style={{ background: "hsl(0 0% 30%)" }}
         animate={{ scale: [1, 1.1, 1], opacity: [0.03, 0.06, 0.03] }}
         transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 3 }}
       />
     </div>
+  );
+}
+
+function EmployerLogos() {
+  const { theme } = useTheme();
+  const isDark = theme === "dark";
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.2, delay: 1.4 }}
+      className="absolute inset-0 pointer-events-none overflow-hidden"
+    >
+      <motion.img
+        src={isDark ? "/images/sambanova-white-logo.png" : "/images/sambanova-gray-logo.png"}
+        alt="SambaNova Systems"
+        className="absolute top-[15%] left-[5%] w-[180px] md:w-[240px] opacity-[0.04] dark:opacity-[0.06]"
+        data-testid="img-logo-sambanova"
+        animate={{ y: [0, -8, 0] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.img
+        src={isDark ? "/images/bain-white-logo.svg" : "/images/bain-red-logo.svg"}
+        alt="Bain & Company"
+        className="absolute bottom-[20%] right-[5%] w-[140px] md:w-[190px] opacity-[0.04] dark:opacity-[0.06]"
+        data-testid="img-logo-bain"
+        animate={{ y: [0, 8, 0] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+      />
+    </motion.div>
   );
 }
 
@@ -36,6 +68,7 @@ export function HeroSection() {
       data-testid="section-hero"
     >
       <GridBackground />
+      <EmployerLogos />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <motion.div

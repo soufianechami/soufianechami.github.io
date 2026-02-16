@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/navigation";
 import { HeroSection } from "@/components/hero-section";
+import { ClientLogosSection } from "@/components/client-logos-section";
 import { AboutSection } from "@/components/about-section";
 import { ExperienceSection } from "@/components/experience-section";
 import { ImpactSection } from "@/components/impact-section";
@@ -13,6 +14,7 @@ export default function Home() {
     <div id="top" className="min-h-screen bg-background">
       <Navigation />
       <HeroSection />
+      <ClientLogosSection />
       <div className="section-divider" />
       <AboutSection />
       <div className="section-divider" />
