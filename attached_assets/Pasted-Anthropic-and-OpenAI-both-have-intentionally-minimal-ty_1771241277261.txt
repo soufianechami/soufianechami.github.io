@@ -1,0 +1,136 @@
+Anthropic and OpenAI both have intentionally minimal, type‑driven visual identities, but Anthropic leans warm/ editorial while OpenAI is stark, geometric, and mostly monochrome. Below is a pragmatic breakdown you can reuse in decks, sites, or UI. [designyourway](https://www.designyourway.net/blog/openai-logo/)
+
+***
+
+## Anthropic visual identity
+
+### Core color palette
+
+Anthropic uses a muted off‑white + charcoal base with three earthy accents. [skills](https://skills.sh/anthropics/skills/brand-guidelines)
+
+- Dark (primary text / dark UI background): `#141413`. [agent-skills](https://agent-skills.md/skills/anthropics/skills/brand-guidelines)
+- Light (page background / dark‑mode text): `#FAF9F5`. [uicolours](https://uicolours.com/brands/anthropic)
+- Mid gray (secondary text, borders): `#B0AEA5`. [skills](https://skills.sh/anthropics/skills/brand-guidelines)
+- Light gray (subtle panels, dividers): `#E8E6DC`. [agent-skills](https://agent-skills.md/skills/anthropics/skills/brand-guidelines)
+
+Accent colors (buttons, links, highlights): [uicolours](https://uicolours.com/brands/anthropic)
+
+- Burnt orange (primary accent): `#D97757`.  
+- Blue (secondary accent): `#6A9BCC`.  
+- Green (tertiary accent): `#788C5D`.  
+
+Some analyses also note a warm tan/brown in the logo lockup around `#D4A574`, but this appears more in editorial treatments than the core UI palette. [designyourway](https://www.designyourway.net/blog/anthropic-logo/)
+
+### Typography
+
+Anthropic’s documented styling uses a clean geometric **sans** for headings and a serif for body, giving it a humanist, editorial feel. [agent-skills](https://agent-skills.md/skills/zircote/.claude/brand-guidelines)
+
+- Headings (H1–H3):  
+  - Font: Poppins (sans‑serif).  
+  - Weight: 500–600 for main headings, 400–500 for subheads (typical implementation; only “Poppins for headings” is specified). [agent-skills](https://agent-skills.md/skills/zircote/.claude/brand-guidelines)
+  - Size guidelines (from brand skill docs): apply Poppins on headings *24pt and larger*. [agent-skills](https://agent-skills.md/skills/zircote/.claude/brand-guidelines)
+  - Case: Sentence‑case or Title‑case; avoid ALL CAPS for long headings (Anthropic’s public site reflects this editorial tone).
+
+- Body text:  
+  - Font: Lora (serif).  
+  - Weight: 400 (regular) for paragraphs, 500 for emphasis. [skills](https://skills.sh/anthropics/skills/brand-guidelines)
+  - Suggested sizes in product/web contexts (not officially specified but consistent with usage):  
+    - Desktop body: 16–18 px.  
+    - Small UI labels: 12–14 px.  
+
+- Fallbacks when brand fonts are unavailable:  
+  - Headings: Arial.  
+  - Body: Georgia. [agent-skills](https://agent-skills.md/skills/anthropics/skills/brand-guidelines)
+
+### Layout and UI styling
+
+From the internal “brand‑guidelines” skill and public UI: [agent-skills](https://agent-skills.md/skills/zircote/.claude/brand-guidelines)
+
+- Backgrounds:  
+  - Default page: solid **light** `#FAF9F5`.  
+  - Cards / sections: either white on light background or very subtle tints of `#E8E6DC`.  
+- Text color:  
+  - Primary: `#141413`.  
+  - Secondary/metadata: `#B0AEA5`.  
+- Buttons:  
+  - Primary: filled `#D97757` on light background, text `#FAF9F5`.  
+  - Secondary: outlined with `#141413`, text `#141413`, transparent or very light background.  
+- Shape styling:  
+  - Non‑text shapes and icons rotate through orange, blue, and green accents to maintain visual interest while staying on‑brand. [skills](https://skills.sh/anthropics/skills/brand-guidelines)
+- General feel: low‑contrast, warm, lots of negative space; minimal borders, preference for flat fills and understated shadows.
+
+***
+
+## OpenAI visual identity
+
+### Core color palette
+
+OpenAI’s official primary color is pure black; the logo and brand system are primarily monochrome. [brandpalettes](https://brandpalettes.com/openai-color-codes/)
+
+- Primary brand color:  
+  - Black: `#000000` (RGB 0,0,0; Pantone Black 6 C; CMYK often given as approx 60,40,40,100 in brand palettes). [brandpalettes](https://brandpalettes.com/openai-color-codes/)
+- Neutral background:  
+  - White: `#FFFFFF` for backgrounds, logo reversal, and high‑contrast layouts. [archive.area17](https://archive.area17.com/directory/2023_openai/36_brand-guidelines.pdf)
+
+OpenAI has introduced extended grays and subtle blues in recent redesigns to soften the pure black/white contrast (e.g., site UI), but the formal logo palette is still black and white. [archive.area17](https://archive.area17.com/directory/2023_openai/36_brand-guidelines-OLD-2022.pdf)
+
+### Logo usage basics
+
+From the brand guidelines PDFs and secondary analyses: [designyourway](https://www.designyourway.net/blog/openai-logo/)
+
+- Logo mark: the “Blossom” symbol (interlocking hexagonal knot) plus the wordmark “OpenAI”.  
+- Approved color applications:  
+  - Black logo on white background.  
+  - White logo on black background.  
+  - Avoid arbitrary colors; use official assets.  
+- Clear space: maintain a minimum exclusion zone around the logo; exact measurements are defined in the internal PDF, typically tied to the “O” height (e.g., 0.5× or 1× logo height), but the public summaries only state “maintain prescribed clear space.” [archive.area17](https://archive.area17.com/directory/2023_openai/36_brand-guidelines-OLD-2022.pdf)
+- Minimum size: PDFs note minimum pixel/print sizes to preserve legibility, but those numeric values are not exposed in public summaries; treat the Blossom mark cautiously below ~24 px height.
+
+### Typography
+
+The current wordmark uses a custom geometric sans called **OpenAI Sans**, drawn by ABC Dinamo. [designyourway](https://www.designyourway.net/blog/openai-logo/)
+
+- Brand typeface:  
+  - Font: OpenAI Sans (custom).  
+  - Styles: 5 weights with italics; geometric sans with a perfectly circular “O”, balanced to avoid a cold, overly mechanistic look. [designyourway](https://www.designyourway.net/blog/openai-logo/)
+  - Usage: logo wordmark, headings, and brand communications where allowed by license.  
+
+- When OpenAI Sans is not available (e.g., when you are doing a “similar but not official” layout), common practice is to approximate with:  
+  - Primary: a geometric/humanist sans like Inter, Söhne, or GT America (not official, but used in independent brand breakdowns).  
+  - Sizes for typical web UI:  
+    - H1: 32–40 px.  
+    - H2: 24–32 px.  
+    - Body: 16–18 px.  
+
+OpenAI’s official guidelines do not publish a detailed typography spec publicly beyond naming OpenAI Sans and requiring the supplied assets for logo usage. [designyourway](https://www.designyourway.net/blog/openai-logo/)
+
+### Layout and UI styling
+
+From the older public guidelines and brand analyses: [archive.area17](https://archive.area17.com/directory/2023_openai/36_brand-guidelines.pdf)
+
+- Backgrounds:  
+  - Prefer pure **black** or **white** for logo placement.  
+  - Web experiences often use dark themes with black or near‑black backgrounds, large white text, and generous padding.  
+- Text color:  
+  - Primary: white on dark backgrounds, black on light backgrounds. [archive.area17](https://archive.area17.com/directory/2023_openai/36_brand-guidelines.pdf)
+- Buttons and accents:  
+  - Historically: black/white fills with thin borders, minimal chromatic color.  
+  - Newer UIs add subtle colored gradients and blues for call‑to‑action, but these are not formal logo colors and can evolve across product lines. [openai](https://openai.com)
+- Overall style: high contrast, minimal ornamentation, strong grid alignment, large typography to give the Blossom and wordmark visual dominance. [archive.area17](https://archive.area17.com/directory/2023_openai/36_brand-guidelines-OLD-2022.pdf)
+
+***
+
+## Side‑by‑side reference
+
+| Aspect              | Anthropic                                                                 | OpenAI                                                                                 |
+|---------------------|---------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
+| Primary base color  | Dark charcoal `#141413`, off‑white `#FAF9F5`. [skills](https://skills.sh/anthropics/skills/brand-guidelines)            | Black `#000000`, white `#FFFFFF`. [brandpalettes](https://brandpalettes.com/openai-color-codes/)                                     |
+| Accents             | Burnt orange `#D97757`, blue `#6A9BCC`, green `#788C5D`. [skills](https://skills.sh/anthropics/skills/brand-guidelines) | Mostly monochrome; subtle grays/blues in UI but not core logo colors. [brandpalettes](https://brandpalettes.com/openai-color-codes/) |
+| Heading font        | Poppins (sans‑serif). [agent-skills](https://agent-skills.md/skills/zircote/.claude/brand-guidelines)                                    | OpenAI Sans (custom geometric sans). [designyourway](https://www.designyourway.net/blog/openai-logo/)                                          |
+| Body font           | Lora (serif). [agent-skills](https://agent-skills.md/skills/zircote/.claude/brand-guidelines)                                    | OpenAI Sans or system sans; not fully specified publicly. [designyourway](https://www.designyourway.net/blog/openai-logo/)                     |
+| Font size cues      | Poppins for headings ≥24 pt; body 16–18 px typical. [agent-skills](https://agent-skills.md/skills/zircote/.claude/brand-guidelines)      | H1 ~32–40 px; body 16–18 px typical web usage (inferred, not explicit). [designyourway](https://www.designyourway.net/blog/openai-logo/)       |
+| Overall feel        | Warm, editorial, humanist, low‑contrast. [designyourway](https://www.designyourway.net/blog/anthropic-logo/)                 | Stark, techy, geometric, high‑contrast. [designyourway](https://www.designyourway.net/blog/openai-logo/)                                |
+
+***
+
+If you want, I can translate this into a ready‑to‑copy Figma or Tailwind token set for each brand so you can prototype “Anthropic‑style” and “OpenAI‑style” layouts for Sambanova demos.
