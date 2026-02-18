@@ -156,7 +156,7 @@ export function HeroSection() {
             <Github className="w-5 h-5" />
           </a>
           <a
-            href="https://twitter.com/soufiane_chami"
+            href="https://twitter.com/chami_soufiane"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2.5 rounded-md text-muted-foreground transition-colors hover-elevate"
